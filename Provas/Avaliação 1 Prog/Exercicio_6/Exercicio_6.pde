@@ -1,0 +1,64 @@
+int a=0,x=0,xi=100,xo=25,b=1,c=1,d,y=0,yi=100,yo=25;
+
+size(500,500);
+noStroke();
+background(255);
+for(d=0;d<10;d++){
+  x=0;
+xi=100;
+xo=25;
+if(c%2!=0){
+  b=0;
+for(a=0;a<10;a++){
+  if(b%2!=0){
+fill(225,0,30);
+rect(x,y,100,100);
+x=x+100;
+fill(0,71,171);
+quad(xi-50,yi-100,xi-100,yi-50,xi-50,yi,xi,yi-50);
+xi=xi+100;
+fill(225,0,30);
+rect(xo,yo,50,50);
+xo=xo+100;}
+if(b%2==0){
+  fill(0,71,171);
+rect(x,y,100,100);
+x=x+100;
+fill(225,0,30);
+quad(xi-50,yi-100,xi-100,yi-50,xi-50,yi,xi,yi-50);
+xi=xi+100;
+fill(0,71,171);
+rect(xo,yo,50,50);
+xo=xo+100;}
+b++;
+}}
+if(c%2==0){
+  b=0;
+  for(a=0;a<10;a++){
+  if(b%2!=0){
+fill(0,71,171);
+rect(x,y,100,100);
+x=x+100;
+fill(225,0,30);
+quad(xi-50,yi-100,xi-100,yi-50,xi-50,yi,xi,yi-50);
+xi=xi+100;
+fill(0,71,171);
+rect(xo,yo,50,50);
+xo=xo+100;}
+if(b%2==0){
+  fill(225,0,30);
+rect(x,y,100,100);
+x=x+100;
+fill(0,71,171);
+quad(xi-50,yi-100,xi-100,yi-50,xi-50,yi,xi,yi-50);
+xi=xi+100;
+fill(225,0,30);
+rect(xo,yo,50,50);
+xo=xo+100;}
+b++;
+}}
+y=y+100;
+yi=yi+100;
+yo=yo+100;
+c++;
+}
